@@ -1,0 +1,98 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Safe Area Scroll Repro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Safe Area Scroll Repro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div style="padding: 16px;">
+    <h2>Scroll + Keyboard Test</h2>
+    <p>This form has many fields to test scrolling behavior when the keyboard is open.
+       With the <code>@capacitor-community/safe-area</code> plugin installed and
+       <code>EdgeToEdge.enable(this)</code> in the Android activity, the page should
+       scroll when the keyboard is up. If it doesn't, that's the bug.</p>
+
+    <h3>Steps to reproduce:</h3>
+    <ol>
+      <li>Open this app on an Android device</li>
+      <li>Tap any input field (keyboard opens)</li>
+      <li>Try to scroll the page while the keyboard is visible</li>
+      <li>Observe: the page cannot be scrolled</li>
+      <li>Try to dismiss the keyboard by tapping outside an input</li>
+      <li>Observe: the keyboard is hard to dismiss</li>
+    </ol>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-input label="First Name" labelPlacement="stacked" type="text" placeholder="Enter first name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Last Name" labelPlacement="stacked" type="text" placeholder="Enter last name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Email" labelPlacement="stacked" type="email" placeholder="Enter email address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Phone" labelPlacement="stacked" type="tel" placeholder="Enter phone number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Street Address" labelPlacement="stacked" type="text" placeholder="Enter street address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Apartment / Suite" labelPlacement="stacked" type="text" placeholder="Apt, Suite, Unit, etc."></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="City" labelPlacement="stacked" type="text" placeholder="Enter city"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="State" labelPlacement="stacked" type="text" placeholder="Enter state"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Zip Code" labelPlacement="stacked" type="text" placeholder="Enter zip code"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Country" labelPlacement="stacked" type="text" placeholder="Enter country"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Company" labelPlacement="stacked" type="text" placeholder="Enter company name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Job Title" labelPlacement="stacked" type="text" placeholder="Enter job title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Date of Birth" labelPlacement="stacked" type="date" placeholder="Select date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Website" labelPlacement="stacked" type="url" placeholder="Enter website URL"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Username" labelPlacement="stacked" type="text" placeholder="Choose a username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Password" labelPlacement="stacked" type="password" placeholder="Create a password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Confirm Password" labelPlacement="stacked" type="password" placeholder="Confirm password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea label="Bio" labelPlacement="stacked" placeholder="Tell us about yourself" rows="4"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Emergency Contact Name" labelPlacement="stacked" type="text" placeholder="Enter emergency contact"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Emergency Contact Phone" labelPlacement="stacked" type="tel" placeholder="Enter emergency phone"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div style="padding: 16px;">
+    <ion-button expand="block">Submit</ion-button>
+  </div>
+</ion-content>

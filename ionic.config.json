@@ -1,0 +1,7 @@
+{
+  "name": "safe-area-scroll-repro",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
